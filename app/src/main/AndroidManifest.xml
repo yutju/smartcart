@@ -38,6 +38,12 @@
         <!-- PayProductActivity 등록 -->
         <activity
             android:name=".PayProductActivity" />
+
+        <!-- 비콘 데이터 수신을 위한 서비스 등록 -->
+        <service
+            android:name=".BeaconReceiverService"
+            android:enabled="true"
+            android:exported="true" />
     </application>
 
 </manifest>

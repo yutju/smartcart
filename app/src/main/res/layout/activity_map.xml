@@ -5,11 +5,39 @@
     android:layout_height="match_parent"
     tools:context=".MapActivity"
     tools:ignore="ExtraText">
-    <ImageView
-        android:id="@+id/image_view"
+
+    <!-- ScrollView를 추가합니다. -->
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/mart_img_example"
-        android:scaleType="fitXY"
-        android:contentDescription="MapImage" />
+        android:layout_height="match_parent">
+
+        <!-- HorizontalScrollView를 추가합니다. -->
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- 마트지도 이미지를 표시하는 ImageView -->
+            <ImageView
+                android:id="@+id/image_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/mart_img_example"
+                android:scaleType="fitXY"
+                android:contentDescription="MapImage" />
+
+        </HorizontalScrollView>
+
+    </ScrollView>
+
+    <!-- 이전 화면으로 돌아가는 버튼 -->
+    <Button
+        android:id="@+id/back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="나가기"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp" />
+
 </RelativeLayout>
